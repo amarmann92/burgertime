@@ -1,0 +1,55 @@
+<div class="container">
+    <img src="/img/burgertime.jpg" alt="Burgertime logo" id="logo">
+    <div class="flex-container row">
+        <section class="avail-burgers col-6">
+
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li>
+                    <h4>
+                        {{burger_name}}
+                        <i class="fa fa-minus-square delete" data-id="{{id}}" aria-hidden="true"></i>
+                        <button class="devour" data-id="{{id}}" data-devoured="{{devoured}}">
+                            Eat Me
+                        </button>
+                    </h4>
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </section>
+
+        <section class="devoured-burgers col-6">
+            <h2>Burgers Devoured</h2>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                <li>
+                    <h4>
+                        {{burger_name}}
+                        <button class="fa fa-minus-square delete" data-id="{{id}}" aria-hidden="true">X</button>
+                    </h4>
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </section>
+    </div>
+    <hr>
+
+    <div class="forms row">
+        <form class="create-form col-12">
+            <h3>Add a Burger you'd like to devour.</h3>
+            <div class="form-group">
+                <div class="input-line">
+                    <label for="burger-name">Burger Name:</label>
+                    <input type="text" id="burger-name">
+                </div>
+            </div>
+
+            <button class="addBurger" type="submit">Add Burger</button>
+        </form>
+    </div>
+
+</div>

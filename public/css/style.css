@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: auto;
+  text-align: center;
+  background-color: darkblue;
+  color: white;
+}
+
+.avail-burgers {
+  float: left;
+}
+
+#logo {
+  width: 60%;
+}
+
+ul li {
+  margin-left: 40px;
+  padding-bottom: 10px;
+  list-style: none;
+}
+
+h1 {
+  margin: 50px 0;
+  font-size: 4em;
+  background-color: cornflowerblue;
+  height: 120px;
+  line-height: 120px;
+}
+
+hr {
+  margin-bottom: 10px;
+  border: dotted crimson;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  max-height: 100vh;
+  position: relative;
+  width: 80%;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.devoured-burgers,
+.avail-burgers {
+  margin: 5px;
+}
+
+.avail-burgers {
+  flex: 1;
+  flex-grow: 1;
+}
+
+.devoured-burgers {
+  flex: 2;
+  flex-grow: 1;
+}
+
+.forms {
+  margin: auto;
+  width: 40%;
+  height: 150px;
+  text-align: center;
+}
+
+.forms h2 {
+  padding-top: 5px;
+}
+
+.input-line {
+  padding: 3px;
+}
+
+.addBurger {
+  margin-top: 10px;
+}
+
+.ingredients {
+  margin-left: 25px;
+}
